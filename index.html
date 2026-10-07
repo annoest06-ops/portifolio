@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hussein Nkya — Software Developer</title>
+<meta name="description" content="Self-taught full-stack and AI developer. Founder of Oppobase. Available for internships and volunteer projects.">
+<style>
+:root{--bg:#0b1220;--bg2:#101a2e;--card:#14203a;--bd:#22304f;--fg:#eef2fa;--mut:#9fb0cc;--ac:#2dd4bf;--ac2:#f5b84b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;overflow-x:hidden}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(11,18,32,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav b{font-size:1.05rem}nav b span{color:var(--ac)}
+nav div a{margin-left:18px;text-decoration:none;color:var(--mut);font-size:.9rem}
+nav div a:hover{color:var(--ac)}
+@media(max-width:620px){nav div a:not(.cta){display:none}}
+.cta{background:var(--ac);color:#06201c!important;padding:7px 14px;border-radius:99px;font-weight:700}
+section{max-width:1000px;margin:0 auto;padding:84px 22px 20px}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 6px}
+.eyebrow{color:var(--ac);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.lead{color:var(--mut);max-width:640px}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;max-width:none;padding:110px 22px 60px}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35;animation:float 14s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--ac);top:5%;left:-8%}
+.b2{width:360px;height:360px;background:#6366f1;bottom:0;right:-6%;animation-delay:-6s}
+@keyframes float{50%{transform:translate(40px,-30px) scale(1.1)}}
+.hero-in{position:relative;max-width:1000px;margin:0 auto;width:100%;display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.hero-in>div{flex:1 1 340px}
+h1{font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.05;margin:10px 0 16px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-block;margin:10px 10px 0 0;padding:12px 22px;border-radius:99px;background:var(--ac);color:#06201c;font-weight:700;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.o{background:none;border:1px solid var(--ac);color:var(--ac)}
+.me{flex:0 0 260px!important;width:260px;height:260px;border-radius:50%;border:3px solid var(--ac);box-shadow:0 0 0 10px rgba(45,212,191,.12)}
+/* placeholders */
+.ph{position:relative;overflow:hidden;background:var(--bg2);border:1px dashed var(--bd);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mut);font-size:.78rem;padding:8px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ph.ok{border-style:solid;cursor:zoom-in}.ph.ok:hover img{transform:scale(1.06)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:28px}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px}
+.stat b{display:block;font-size:2.2rem;color:var(--ac2)}
+.stat span{color:var(--mut);font-size:.88rem}
+/* projects */
+.proj{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:26px;margin-top:28px}
+.proj h3{margin:0 0 4px;font-size:1.5rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;color:var(--ac);border:1px solid rgba(45,212,191,.4);border-radius:99px;padding:2px 10px;margin:6px 6px 0 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:18px 0}
+.cols h4{margin:0 0 4px;color:var(--ac2);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.cols p{margin:0;color:var(--mut)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gal .ph{aspect-ratio:9/12;border-radius:12px}
+@media(max-width:700px){.gal{grid-template-columns:repeat(2,1fr)}}
+/* community */
+.comm{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:28px;align-items:stretch}
+@media(max-width:760px){.comm{grid-template-columns:1fr}}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mosaic .ph{border-radius:16px;min-height:150px}
+.mosaic .big{grid-column:1/-1;min-height:230px}
+.item{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;margin-bottom:14px}
+.item h3{margin:0 0 6px;font-size:1.1rem}.item p{margin:0;color:var(--mut)}
+.chips{margin-top:22px}
+/* contact */
+.contact{text-align:center;background:linear-gradient(135deg,rgba(45,212,191,.14),rgba(99,102,241,.14));border:1px solid var(--bd);border-radius:24px;padding:48px 22px;margin-top:28px}
+footer{text-align:center;color:var(--mut);font-size:.8rem;padding:40px 0}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease;transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;cursor:zoom-out}
+#lb.on{display:flex}#lb img{max-width:100%;max-height:92vh;border-radius:12px}
+@media(prefers-reduced-motion:reduce){.blob{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><b>Hussein<span>.</span></b><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#community">Community</a><a class="cta" href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div class="blob b1"></div><div class="blob b2"></div>
+<div class="hero-in">
+<div class="rv">
+<div class="eyebrow">Software developer · Student leader</div>
+<h1>I build software that <em>real people use</em> every day.</h1>
+<p class="lead">Self-taught full-stack and AI developer, and founder of Oppobase. I'm available for internships and volunteer projects, and I'll build software for organizations that don't have any.</p>
+<a class="btn" href="#contact">Invite me</a><a class="btn o" href="#projects">See my work</a>
+</div>
+<!-- Photo: images/me.jpg -->
+<div class="ph me rv" style="--d:.2s" data-src="images/me.jpg" data-label="Your photo: images/me.jpg" data-nozoom></div>
+</div>
+</header>
+
+<section id="about">
+<div class="rv"><div class="eyebrow">About me</div><h2>Learning by building</h2>
+<p class="lead">I taught myself to code, and I focus on tools that solve real problems. At school I'm a dormitory leader and an elected student government member for 2026–2027. My software is already running in real institutional settings at my school.</p></div>
+<div class="stats">
+<div class="stat rv"><b data-n="3">0</b><span>software systems built</span></div>
+<div class="stat rv" style="--d:.1s"><b data-n="400" data-p="~">0</b><span>primary students taught</span></div>
+<div class="stat rv" style="--d:.2s"><b data-n="100" data-s="%">0</b><span>of them selected for Form 1</span></div>
+<div class="stat rv" style="--d:.3s"><b data-n="2026" data-s="–27">0</b><span>elected to student government</span></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="rv"><div class="eyebrow">Projects</div><h2>What I've built</h2><p class="lead">Click any screenshot to view it larger.</p></div>
+
+<article class="proj rv" data-prefix="oppobase">
+<h3>Oppobase (Opportunity Base)</h3>
+<span class="tag">MVP</span><span class="tag">Next.js</span><span class="tag">Python</span><span class="tag">Gemini API</span>
+<div class="cols">
+<div><h4>Problem</h4><p>Students applying for international scholarships don't know how to answer essay questions, and they have few trusted references.</p></div>
+<div><h4>Solution</h4><p>A platform that pairs AI essay coaching with verified teacher references. The AI asks guiding questions based on each student's achievements and background instead of writing the essay for them.</p></div>
+</div>
+<div class="gal"></div>
+</article>
+
+<article class="proj rv" data-prefix="furniture">
+<h3>Furniture Inventory System</h3>
+<span class="tag">In regular use school-wide</span>
+<div class="cols">
+<div><h4>Problem</h4><p>School furniture needed to be tracked properly across the whole school.</p></div>
+<div><h4>Solution</h4><p>A record-keeping system the school still uses regularly.</p></div>
+</div>
+<div class="gal"></div>
+</article>
+
+<article class="proj rv" data-prefix="amanah">
+<h3>Amanah — Gate Registration System</h3>
+<span class="tag">Shared with the head of school</span>
+<div class="cols">
+<div><h4>Problem</h4><p>People entering and leaving the school gate needed to be recorded reliably.</p></div>
+<div><h4>Solution</h4><p>A digital gate registration system that keeps the records in one place.</p></div>
+</div>
+<div class="gal"></div>
+</article>
+</section>
+
+<section id="community">
+<div class="rv"><div class="eyebrow">Community &amp; initiative</div><h2>Giving back to my school</h2></div>
+<div class="comm">
+<!-- Photos: images/community-1.jpg, community-2.jpg, community-3.jpg -->
+<div class="mosaic">
+<div class="ph rv big" data-src="images/community-1.jpg" data-label="Add photo 1: images/community-1.jpg"></div>
+<div class="ph rv" style="--d:.1s" data-src="images/community-2.jpg" data-label="Add photo 2: images/community-2.jpg"></div>
+<div class="ph rv" style="--d:.2s" data-src="images/community-3.jpg" data-label="Add photo 3: images/community-3.jpg"></div>
+</div>
+<div>
+<div class="item rv"><h3>Volunteer Teacher, Local Primary School (2025)</h3><p>Taught about 400 students English, science and computer. They passed their NECTA exams, all were selected for Form 1, and they became confident English speakers who took their studies seriously.</p></div>
+<div class="item rv" style="--d:.1s"><h3>Technical Support at My School</h3><p>I helped my school with technical work by building and maintaining software tools, including the furniture inventory, the gate registration system, and an automated morning speech system.</p></div>
+</div>
+</div>
+<div class="chips rv"><span class="tag">Dormitory Leader</span><span class="tag">Student Government 2026–2027</span><span class="tag">React / Next.js</span><span class="tag">Python</span><span class="tag">AI integration</span><span class="tag">Databases</span><span class="tag">Git</span><span class="tag">Teaching</span></div>
+</section>
+
+<section id="contact">
+<div class="contact rv">
+<div class="eyebrow">Let's work together</div>
+<h2>Invite me to your team this holiday</h2>
+<p class="lead" style="margin:0 auto">Whether you need an extra pair of hands or software you don't have yet, I'm ready to learn and deliver.</p>
+<a class="btn" href="mailto:hussein.nkya22@gmail.com">hussein.nkya22@gmail.com</a>
+<a class="btn o" href="tel:+255785619069">Call 0785 619 069</a>
+<a class="btn o" href="#">WhatsApp</a>
+</div>
+</section>
+<footer>© 2026 Hussein Nkya</footer>
+
+<div id="lb"><img alt=""></div>
+
+<script>
+// build galleries (4 screenshots per project: prefix-1.jpg … prefix-4.jpg)
+const labels=['Home / main screen','Key feature','Data / records view','Result or report'];
+document.querySelectorAll('.proj').forEach(p=>{
+  const g=p.querySelector('.gal'),k=p.dataset.prefix;
+  for(let i=1;i<=4;i++){const d=document.createElement('div');d.className='ph rv';d.style.setProperty('--d',(i*.08)+'s');
+    d.dataset.src=`images/${k}-${i}.jpg`;d.dataset.label=`Screenshot ${i}: images/${k}-${i}.jpg\n(${labels[i-1]})`;g.appendChild(d);}
+});
+// image slots
+document.querySelectorAll('.ph[data-src]').forEach(s=>{
+  s.textContent=s.dataset.label;
+  const im=new Image();im.alt='';im.onload=()=>{s.textContent='';s.appendChild(im);s.classList.add('ok')};im.src=s.dataset.src;
+});
+// lightbox
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.addEventListener('click',e=>{const s=e.target.closest('.ph.ok');if(s&&!s.hasAttribute('data-nozoom')){lbi.src=s.querySelector('img').src;lb.classList.add('on')}else if(e.target.closest('#lb'))lb.classList.remove('on')});
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+  const n=e.target.querySelector('[data-n]');if(n)count(n)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+function count(el){const t=+el.dataset.n,pre=el.dataset.p||'',suf=el.dataset.s||'';let c=0;const st=Math.max(1,Math.ceil(t/60));
+  const id=setInterval(()=>{c=Math.min(t,c+st);el.textContent=pre+(t===2026?'2026':c)+suf;if(c>=t)clearInterval(id)},24)}
+</script>
+</body>
+</html>
